@@ -1,0 +1,28 @@
+name: BuildContest
+version: ${project.version}
+main: me.mattgd.buildcontest.BuildContest
+author: mattgd
+description: A BuildContest plugin for the Mines of Code server.
+
+commands:
+   buildcontest:
+      description: BuildContest plugin command.
+      usage: /<command> [args]
+      permission: buildcontest.use
+      aliases: [build]
+permissions:
+   buildcontest.use:
+      description: Allows you to view the build contest information
+      default: true
+      children:
+        buildcontest.code: true
+        buildcontest.info: true
+        buildcontest.help: true
+   buildcontest.admin:
+      description: Allows you to manage the BuildContest plugin settings
+      default: op
+      children:
+        buildcontest.reload: true
+        buildcontest.resetcodes: true
+        buildcontest.setlink: true
+        buildcontest.settheme: true
