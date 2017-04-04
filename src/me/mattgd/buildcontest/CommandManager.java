@@ -21,13 +21,13 @@ public class CommandManager implements CommandExecutor {
 	public static ArrayList<SubCommand> commands = new ArrayList<SubCommand>();
 	
 	public void setup() {
-		commands.add(new VoteCode());
 		commands.add(new Help());
 		commands.add(new Info());
 		commands.add(new Reload());
 		commands.add(new ResetVoteCodes());
 		commands.add(new SetTheme());
 		commands.add(new SetLink());
+		commands.add(new VoteCode());
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
